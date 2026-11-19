@@ -8,6 +8,8 @@ export async function listBooks(req,res) {
  const limit = Math.min(50,Math.max(1,Math.floor(Number(req.query.limit) || 5)));
  const search = escapeRegex(String(req.query.search || '').trim());
  const filter = search ? {$or:[{title:{$regex:search,$options:'i'}},{author:{$regex:search,$options:'i'}}]} : {};
+ const genre = String(req.query.genre || '').trim();
+ if (genre && genre !== 'All') filter.genre = genre;
  try {
   const [data,totalItems] = await Promise.all([Book.find(filter).sort({createdAt:-1,_id:-1}).skip((page-1)*limit).limit(limit),Book.countDocuments(filter)]);
   res.json({success:true,data,page,limit,totalItems,totalPages:Math.max(1,Math.ceil(totalItems/limit))});

@@ -22,6 +22,12 @@ test('public search pagination, protected writes, and token claims', async () =>
   assert.equal(skipped,5); assert.equal(limited,5);
   assert.equal(observedFilter.$or[0].title.$regex,'martin');
   assert.equal(observedFilter.$or[1].author.$options,'i');
+  await fetch(base+'/api/books?genre=Science&search=martin');
+  assert.equal(observedFilter.genre,'Science');
+  assert.equal(observedFilter.$or[0].title.$regex,'martin');
+  await fetch(base+'/api/books?genre=All');
+  assert.equal(observedFilter.genre,undefined);
+  assert.equal(observedFilter.$or,undefined);
   assert.equal((await fetch(base+'/api/books',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'})).status,401);
   assert.equal((await fetch(base+'/api/auth/me',{headers:{Authorization:'Bearer invalid'}})).status,401);
   const claims = {id:'123',username:'Reader',email:'reader@example.com'};
