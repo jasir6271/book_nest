@@ -13,33 +13,22 @@ main{padding-bottom:24px}.hero{max-width:1120px;margin:0 auto;padding:68px 0 61p
 @media(max-width:1200px){.info-page{max-width:calc(100% - 64px)}}
 @media(max-width:620px){.topbar{height:auto;min-height:66px;gap:8px;flex-wrap:wrap;padding:12px 18px}.topbar nav{display:flex;order:3;width:100%;justify-content:space-between;gap:10px;padding-top:8px;border-top:1px solid var(--line)}nav a{font-size:12px}.info-page{max-width:calc(100% - 36px);padding:48px 0 75px}.info-page h1{font-size:43px}.info-lead{font-size:14px}.list-cards{grid-template-columns:1fr;gap:12px;margin-top:30px}.list-cards article{padding:21px}.list-cards h2{margin-top:15px}.about-panel{grid-template-columns:1fr;padding:22px}.auth-brand{margin-top:20px}}
 
-/* MyBookShelf lavender, dusty rose and deep plum theme */
-:root{--ink:#392344;--muted:#76677d;--teal:#69477d;--cream:#f3edf8;--line:#e4d9e9;--orange:#b96e83;--surface:#fffdfb;--soft:#eee4f2;--shadow:0 12px 30px rgba(57,35,68,.10)}
-.topbar{background:rgba(255,253,251,.88)}
-nav a{color:#817487}
-.avatar{background:#eadfed;color:#563967}
-.art-back{background:#e7dced;color:#50375e}
-.art-front{background:#bc7889}
-.catalog-head h2 span{background:#eee5f1}
-.search-wrap{color:#827489}
-.search-wrap:focus-within{border-color:#aa8dbc;box-shadow:0 0 0 3px rgba(105,71,125,.12)}
-.search-wrap kbd{color:#897b8f}
-.filter-button:hover{background:#f3edf6}
-.primary-button{background:#392344;border-color:#392344;box-shadow:0 4px 10px rgba(57,35,68,.16)}
-.primary-button:hover{background:#51335e;box-shadow:0 7px 16px rgba(57,35,68,.22)}
-button:focus-visible{outline-color:#c9a9d1}
-.filter-menu button:hover{border-color:#b89ac3;color:var(--ink)}
-.filter-menu button.chosen{background:#69477d;border-color:#69477d}
-.book-card{border-color:#eee6f0}
-.coral{background:#c87d8d;color:#fff}.lavender{background:#c9b3d5;color:#34203e}.mint{background:#a88bb9;color:#fff}.sage{background:#d3a0aa;color:#452638}.yellow{background:#e3c990;color:#493720}.blue{background:#a9b6d4;color:#302841}
-.row-actions button{background:#f6f0f5;color:#776980}
-.row-actions button:hover{color:#9d526c;background:#f5e7eb}
-.pagination button:hover:not(:disabled){background:#eee5f1}
-.pagination button.selected{background:#392344;color:#fff}
-.spinner{border-top-color:#69477d}
-.toast{box-shadow:0 12px 25px rgba(57,35,68,.24)}
-.overlay{background:rgba(51,31,61,.50)}
-.modal-close{background:#f3edf6}.modal-close:hover{background:#eadfed}
-.modal input:focus,.modal select:focus{border-color:#aa8dbc;box-shadow:0 0 0 3px rgba(105,71,125,.12)}
-.switch-auth{color:#69477d}
-.tour{background:rgba(57,35,68,.25)}
+/* BookNest soft sage and cream palette */
+:root{--ink:#2e3b30;--muted:#727b6d;--teal:#526b52;--cream:#f5f3e9;--line:#e2e2d4;--orange:#8b8052;--surface:#fffef9;--soft:#e9ecdf;--shadow:0 12px 30px rgba(46,59,48,.09)}
+.topbar{background:rgba(255,254,249,.9)}
+nav a{color:#788071}nav .active{color:var(--ink)}
+.brand-dot{color:#a09461}.brand-mark,.auth-logo{background:#526b52}
+.avatar{background:#e6eadc;color:#526b52}
+.art-back{background:#dce4d2;color:#526b52}.art-front{background:#898b63}
+.catalog-head h2 span{background:#eaebdf}
+.search-wrap:focus-within{border-color:#9eae92;box-shadow:0 0 0 3px rgba(82,107,82,.12)}
+.filter-button:hover{background:#f0f0e5}.primary-button{background:#526b52;border-color:#526b52;box-shadow:0 4px 10px rgba(82,107,82,.16)}
+.primary-button:hover{background:#435a43;box-shadow:0 7px 16px rgba(82,107,82,.22)}
+button:focus-visible{outline-color:#bdc9a7}.filter-menu button.chosen{background:#526b52;border-color:#526b52}
+.book-card{border-color:#e8e8dc}.coral{background:#a9ad8a;color:#29372c}.lavender{background:#d6d9c4;color:#384638}.mint{background:#b9c8ad;color:#354b39}.sage{background:#c4cba9;color:#46533a}.yellow{background:#e5ddbd;color:#574f34}.blue{background:#c8d2c5;color:#3f5548}
+.row-actions button{background:#f1f2e9;color:#737c6e}.row-actions button:hover{color:#726a43;background:#eeeddf}
+.pagination button:hover:not(:disabled){background:#eaebdf}.pagination button.selected{background:#526b52;color:#fff}.spinner{border-top-color:#526b52}
+.toast{box-shadow:0 12px 25px rgba(46,59,48,.24)}.overlay{background:rgba(39,52,40,.48)}
+.modal-close{background:#f1f2e9}.modal-close:hover{background:#e6eadc}.modal input:focus,.modal select:focus{border-color:#9eae92;box-shadow:0 0 0 3px rgba(82,107,82,.12)}
+.switch-auth,.sign-in-link{color:#526b52}.tour{background:rgba(39,52,40,.24)}
+.list-cards article,.about-panel{box-shadow:0 7px 22px rgba(46,59,48,.05)}.list-cards a:not(.primary-button){color:#526b52}.about-panel>svg{color:#526b52}
