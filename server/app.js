@@ -1,0 +1,13 @@
+import express from 'express';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import authRoutes from './routes/authRoutes.js';
+import bookRoutes from './routes/bookRoutes.js';
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.get('/',(_req,res)=>res.json({success:true,service:'BookNest API',status:'ok'}));
+app.get('/api/health',(_req,res)=>res.status(mongoose.connection.readyState === 1 ? 200 : 503).json({success:mongoose.connection.readyState === 1,database:'mongodb'}));
+app.use('/api/auth',authRoutes);
+app.use('/api/books',bookRoutes);
+export default app;

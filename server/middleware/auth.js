@@ -1,0 +1,3 @@
+import jwt from 'jsonwebtoken';
+import { jwtSecret } from '../config.js';
+export const auth = (req, res, next) => { const header = req.headers.authorization || ''; const token = header.startsWith('Bearer ') ? header.slice(7) : null; if (!token) return res.status(401).json({ success: false, message: 'Authentication required' }); try { req.user = jwt.verify(token, jwtSecret); next(); } catch { return res.status(401).json({ success: false, message: 'Token is invalid or expired' }); } };

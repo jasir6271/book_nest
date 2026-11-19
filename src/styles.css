@@ -32,3 +32,4 @@ button:focus-visible{outline-color:#bdc9a7}.filter-menu button.chosen{background
 .modal-close{background:#f1f2e9}.modal-close:hover{background:#e6eadc}.modal input:focus,.modal select:focus{border-color:#9eae92;box-shadow:0 0 0 3px rgba(82,107,82,.12)}
 .switch-auth,.sign-in-link{color:#526b52}.tour{background:rgba(39,52,40,.24)}
 .list-cards article,.about-panel{box-shadow:0 7px 22px rgba(46,59,48,.05)}.list-cards a:not(.primary-button){color:#526b52}.about-panel>svg{color:#526b52}
+.book-table-wrap{max-width:1120px;margin:auto;overflow-x:auto}.book-table{width:100%;border-collapse:collapse;text-align:left}.book-table th,.book-table td{padding:16px 12px;border-bottom:1px solid var(--line)}.book-table th{font-size:12px;color:var(--muted)}.book-table td{font-size:14px}.book-table .row-actions{visibility:visible}.book-table tbody tr:hover{background:var(--surface)}
